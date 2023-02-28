@@ -22,14 +22,36 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media(max-width: 70em){
+    width: 85%;
+  }
+  @media(max-width: 64em){
+    width: 100%;
+    flex-direction: column;
+
+    &>*:last-child{
+      width: 80%;
+    }
+  }
+  @media(max-width: 40em){
+    &>*:last-child{
+      width: 90%;
+    }
+  }
 `
 const Box = styled.div`
   width: 50%;
   height: 100%;
   display: flex;
+  min-height: 65vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media(max-width: 40em){
+    min-height: 50vh;
+  }
 `
 const Title = styled.h2`
   font-size: ${props => props.theme.fontxxl};
@@ -38,6 +60,17 @@ const Title = styled.h2`
   color: ${props => props.theme.body};
   align-self: flex-start;
   margin: 0 auto;
+
+  @media(max-width: 64em){
+    width: 100%;
+    text-align: center;
+  }
+  @media(max-width: 48em){
+    font-size: ${props => props.theme.fontxl};
+  }
+  @media(max-width: 30em){
+    font-size: ${props => props.theme.fontlg};
+  }
 `
 const SubText = styled.p`
   font-size: ${props => props.theme.fontlg};
@@ -46,6 +79,15 @@ const SubText = styled.p`
   align-self: flex-start;
   margin: 1rem auto;
   font-weight: 400;
+
+  @media(max-width: 64em){
+    width: 100%;
+    text-align: center;
+    font-size: ${props => props.theme.fontmd};
+  }
+  @media(max-width: 30em){
+    font-size: ${props => props.theme.fontsm};
+  }
 `
 const SubTextLight = styled.p`
   font-size: ${props => props.theme.fontmd};
@@ -54,23 +96,41 @@ const SubTextLight = styled.p`
   align-self: flex-start;
   margin: 1rem auto;
   font-weight: 400;
+
+  @media(max-width: 64em){
+    width: 100%;
+    text-align: center;
+    font-size: ${props => props.theme.fontsm};
+  }
+
+  @media(max-width: 30em){
+    font-size: ${props => props.theme.fontxs};
+  }
 `
 const ButtonContainer = styled.div`
   width: 80%;
   margin: 1rem auto;
+  display: flex;
   align-self: flex-start;
+
+  @media(max-width: 64em){
+   width: 100%;
+   button{
+    margin: 0 auto;
+   }
+  }
 `
 
 const About = () => {
   return (
-    <Section>
+    <Section id="about">
       <Container>
         <Box> 
           <Carousel />
         </Box>
         <Box>
           <Title>
-            Welcome To The Weirdos Club.
+            Welcome To The <br /> Weirdos Club.
           </Title>
           <SubText>
             The WEIRDOS CLUB is a private collection of NFTs—unique digital collectibles. The Weirdos are stored as ERC-721 tokens on the Ethereum blockchain and hosted on IPFS.

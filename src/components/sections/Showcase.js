@@ -129,7 +129,7 @@ const Showcase = () => {
   const Row2Ref = useRef(null)
 
   return (
-    <Section>
+    <Section id="showcase">
         <Row direction='none' ref={Row1Ref}>
           <NftItem img={img1} number={852} price={1} passRef={Row1Ref}/>
           <NftItem img={img2} number={124} price={3.2} passRef={Row1Ref}/>
