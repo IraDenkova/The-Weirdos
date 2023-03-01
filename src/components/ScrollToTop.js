@@ -25,6 +25,7 @@ const Up = styled.div`
 
   cursor: pointer;
   transition: all .2s;
+  z-index: 100;
 
   &:hover{
     transform: scale(1.2);

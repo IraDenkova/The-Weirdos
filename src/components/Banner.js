@@ -21,6 +21,11 @@ const Section = styled.section`
   justify-content: center;
 
   overflow: hidden;
+
+  @media(max-width: 64em){
+    height: 15rem;
+    flex-direction: column;  
+  }
 `
 
 const ImgContainer = styled.div`
@@ -39,6 +44,12 @@ const ImgContainer = styled.div`
     width: 14rem;
     height: auto;
   }
+  @media(max-width: 48em){
+    img{
+    width: 10rem;
+    height: auto;
+  }
+  }
 `
 const Title = styled.h1`
   font-size: ${props => props.theme.fontxxxl};
@@ -48,11 +59,27 @@ const Title = styled.h1`
   width: 35%;
   text-transform: capitalize;
   text-shadow: 1px 1px 2px ${props => props.theme.text};
+
+  @media(max-width: 64em){
+    font-size: ${props => props.theme.fontxxl};
+    width: 40%;
+    text-align: center;
+  }
+  @media(max-width: 48em){
+    font-size: ${props => props.theme.fontxl};
+    width: 100%;
+    padding: 2rem 0;
+  }
 `
 const BtnContainer = styled.div`
   width: 35%;
   display: flex;
   justify-content: flex-end;
+
+  @media(max-width: 48em){
+    width: 100%;
+    justify-content: center;
+  }
 `
 const JoiNow = styled.button`
   display: inline-block;
@@ -87,6 +114,13 @@ const JoiNow = styled.button`
   &:hover::after{
     transform: translate(-50%, -50%) scale(1);
     padding: 0.3rem;
+  }
+  @media(max-width: 48em){
+    padding: 1rem 2rem;
+  }
+  @media(max-width: 30em){
+    padding: 0.7rem 2rem;
+    font-size: ${props => props.theme.fontsm};
   }
 `
 
